@@ -1,0 +1,8 @@
+{
+  "appId": "com.sistersecure.app",
+  "appName": "Sister Secure",
+  "webDir": "index.html",
+  "server": {
+    "androidScheme": "https"
+  }
+}
