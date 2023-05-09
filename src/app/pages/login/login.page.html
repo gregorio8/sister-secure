@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="login-bg">
+    <div class="title-spacement">
+      <ion-note class="welcome">Bem-vindo ao...</ion-note>
+      <ion-note class="title">Sister Secure</ion-note>
+    </div>
+
+    <div class="inputs">
+      <ion-input 
+        type="email"
+        fill="solid"
+        label="Email"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="email">
+      </ion-input>
+
+      <ion-input 
+        type="password"
+        fill="solid"
+        label="Senha"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="password">
+      </ion-input>
+    </div>
+
+    <div class="join">
+      <button (click)="login()" class="enter-btn">Entrar</button>
+      <button (click)="userRegister()" class="register">Cadastrar</button>
+    </div>
+
+    <div class="about">
+      <a class="links">Esqueci minha senha</a>
+      <a class="links">Termos de uso</a>
+    </div>
+
+  </div>
+</ion-content>
