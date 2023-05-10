@@ -36,3 +36,7 @@ ion-menu-button {
   color: black;
   font-size: 44px;
 }
+
+.header-translucent-ios ion-toolbar {
+  --opacity: 0.1;
+}

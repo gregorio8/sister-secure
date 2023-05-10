@@ -4,10 +4,10 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header><ion-icon style="font-size: 44px;" name="person-circle"></ion-icon></ion-list-header>
-          <ion-note>{{user}}</ion-note>
+          <ion-note></ion-note>
 
           <ion-menu-toggle>
-            <ion-item (click)="$event.stopPropagation()" class="menu-bg">
+            <ion-item (click)="$event.stopPropagation()" class="menu-bg"> 
               <ion-icon slot="start" [ios]="camuflado.icon + '-outline'" [md]="camuflado.icon + '-sharp'"></ion-icon>
               <ion-label>{{ camuflado.title }}</ion-label>
               <ion-toggle (click)="$event.stopPropagation()"></ion-toggle>

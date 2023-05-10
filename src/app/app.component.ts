@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -17,7 +17,6 @@ export class AppComponent {
   ];
 
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  user = 'Jackeline Ferreira'
 
   constructor(private router: Router) {
 
