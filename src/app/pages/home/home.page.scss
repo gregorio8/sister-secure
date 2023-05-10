@@ -1,0 +1,32 @@
+.comment-feed {
+    width: 400px;
+    margin: 20px auto;
+  }
+  
+  .comment {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .user-photo {
+    width: 40px;
+    height: 40px;
+    background-color: #aaa;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .user {
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .message {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  
