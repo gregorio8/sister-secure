@@ -32,7 +32,11 @@ const routes: Routes = [
   {
     path: 'setting-page',
     loadChildren: () => import('./pages/setting-page/setting-page.module').then( m => m.SettingPagePageModule)
+  },  {
+    path: 'location',
+    loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule)
   },
+
 
 
 
