@@ -3,6 +3,7 @@
     flex-direction: column;
     margin: 20px auto;
     padding: 0 12px;  
+    overflow: auto;
   }
   
   .comment {
@@ -40,5 +41,13 @@
   .message {
     margin-top: 30px;
     font-size: 14px;
+  }
+
+  .feed {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #e53939;
+    font-weight: 600;
+    align-self: center;
   }
   
