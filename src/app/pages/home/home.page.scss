@@ -1,53 +1,55 @@
 .comment-feed {
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
-    padding: 0 12px;  
-    overflow: auto;
-  }
-  
-  .comment {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-  }
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 0 12px;  
+  overflow: auto;
+}
 
-  .like {
-    display: flex;
-    justify-content: end;
-    align-items: baseline;
-  }
+.comment {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
 
-  .but-like {
-    padding: 0 10px;
-  }
-  
-  .user-photo {
-    width: 40px;
-    height: 40px;
-    background-color: #aaa;
-    border-radius: 50%;
-    float: left;
-    margin-right: 10px;
-  }
-  
-  .user {
-    margin-top: 10px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .message {
-    margin-top: 30px;
-    font-size: 14px;
-  }
+.like {
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+}
 
-  .feed {
-    margin-bottom: 24px;
-    font-size: 24px;
-    color: #e53939;
-    font-weight: 600;
-    align-self: center;
-  }
+.but-like {
+  padding: 0 10px;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  background-color: #aaa;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+.user {
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+}
+
+.message {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.feed {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #e53939;
+  font-weight: 600;
+  align-self: center;
+}
   

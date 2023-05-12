@@ -1,13 +1,19 @@
 <app-header></app-header>
 
-
 <div class="comment-feed">
   
   <h2 class="feed">Feed de mensagens</h2>
 
   <div class="comment">
-    <div class="user-photo"></div>
-    <div class="user">John Doe</div>
+    <div class="user">
+      <div class="user-photo"></div>
+      <div>
+        John Doe
+      </div>
+      <div>
+        <button><img src="/assets/icon/dots.jpeg" alt="botão para editar e excluir"></button>
+      </div>
+    </div>
     <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     <div class="like">
       {{likes}}<button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
@@ -40,7 +46,6 @@
       {{likes}}<button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
     </div>
   </div>
-
 
 </div>
 <app-footer></app-footer>
