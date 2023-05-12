@@ -24,4 +24,6 @@ export class FooterComponent  implements OnInit {
     this.router.navigate(['/location']);
   }
 
+  callPolice() {}
+
 }

@@ -7,7 +7,7 @@ import { FooterComponent } from './footer.component';
 @NgModule({
   declarations: [FooterComponent],
   imports: [
-    CommonModule
+    CommonModule 
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -1,5 +1,7 @@
 <app-header></app-header>
 
-<div class="location-container"></div>
+<input class="search-input" [(ngModel)]="search" type="text" name="search" placeholder="Buscar por...">
+<div class="location-container" *ngIf="search.length"></div>
 
 <app-footer></app-footer>
+

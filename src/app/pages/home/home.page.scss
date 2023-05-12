@@ -4,6 +4,7 @@
     margin: 20px auto;
     padding: 0 12px;  
     overflow: auto;
+    height: 100%;
   }
   
   .comment {
@@ -36,6 +37,15 @@
     margin-top: 10px;
     font-weight: bold;
     margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .name {
+    margin-left: 10px;
+    width: 75%;
   }
   
   .message {
