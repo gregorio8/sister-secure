@@ -54,8 +54,10 @@
     font-size: 14px;
   }
 
-.but-like {
-  padding: 0 10px;
+
+.like {
+  display: flex;
+  justify-content: end;
 }
 
 .user-photo {
