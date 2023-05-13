@@ -1,0 +1,23 @@
+.alert-guardian{
+    padding: 7px;
+    border: 2px solid black;
+}
+
+.guardian-div {
+    width: 100%;
+    display: flex;
+    justify-content: line-through;
+    border: 2px solid black;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.profile {
+    width: 32px;
+    height: 30px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}

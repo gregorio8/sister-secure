@@ -20,6 +20,10 @@ export class FooterComponent  implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  goGuardian() {
+    this.router.navigate(['/guardian']);
+  }
+
   goLocation() {
     this.router.navigate(['/location']);
   }
