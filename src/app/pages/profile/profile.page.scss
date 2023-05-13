@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    padding: 16px;
+    overflow: auto;
+}
+
+.container h1 {
+    color: #DD2929;
+    font-weight: 600;
+}
+
+.container span {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 8px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.eye {
+    -webkit-user-select: none;
+     -moz-user-select: none; 
+     -ms-user-select: none;
+      user-select: none;
+      pointer-events: none;
+}
