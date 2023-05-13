@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { RegisterService } from './register.service';
 
 @Component({
   selector: 'app-register',
@@ -8,25 +9,32 @@ import { Router } from '@angular/router';
 })
 export class RegisterPage implements OnInit {
 
+  userData: any = {};
+
   name?: string;
   cpf?: string;
   email?: string;
   password?: string;
   confirmPassword?: string;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private registerService: RegisterService
+  ) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
+    this.registerService.userData = this.userData;
+
     const user = {
       name: this.name,
       cpf: String(this.cpf),
       email: this.email,
       password: this.password
     };
-
+  
     if (!this.name || !this.cpf || !this.email || !this.password || !this.confirmPassword) {
       return;
     }
@@ -38,7 +46,10 @@ export class RegisterPage implements OnInit {
     let users = JSON.parse(localStorage.getItem('users') || '[]');
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
-    
+  
+    this.registerService.userData = user;
+    this.registerService.saveUserData();
+  
     this.router.navigate(['/login']);
   }
 
