@@ -1,6 +1,23 @@
 <app-header></app-header>
 
 <div class="comment-feed">
+
+  <div class="alert-buttons-container">
+
+    <button class="alert">
+      <div class="alert-button">
+        <span class="desc">Guardião</span>
+        <ion-icon class="alert-icon" name="alert-circle"></ion-icon>
+      </div>
+    </button>
+
+    <button class="alert">
+      <div class="alert-button">
+        <span class="desc">Policia</span>
+        <ion-icon class="alert-icon" name="call"></ion-icon>
+      </div>
+    </button>
+  </div>
   
   <h2 class="feed">Feed de mensagens</h2>
 
@@ -67,8 +84,5 @@
       {{likes}}<button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
     </div>
   </div>
-
-
-
 </div>
 <app-footer></app-footer>

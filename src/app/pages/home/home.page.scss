@@ -90,4 +90,39 @@
   font-weight: 600;
   align-self: center;
 }
+
+.alert-button {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 75px;
+  width: 100px;
+  background: white;
+  align-items: center;
+  background: red;
+  border-radius: 20px;
+}
+
+.alert-buttons-container {
+  align-self: center;
+  padding: 8px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.alert {
+  background: none;
+}
+
+.desc {
+  margin: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alert-icon {
+  color: white;
+    font-size: 24px;
+}
   
