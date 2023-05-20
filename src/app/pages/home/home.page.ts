@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,10 @@ export class HomePage implements OnInit {
   likes : number = 0;
   likeBool : boolean = false;
 
-  constructor() { }
+  constructor(private homeService: HomeService) { }
 
   ngOnInit() {
+    this.homeService.getJavaTest();
   }
 
   like(){
