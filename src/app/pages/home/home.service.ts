@@ -12,7 +12,7 @@ export class HomeService {
 
   getJavaTest() {
     const url = 
-        'http://localhost:8080/api';
+      'http://localhost:8080/api';
     return this.http.get(url);
   }
 
