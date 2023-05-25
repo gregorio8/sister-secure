@@ -1,0 +1,55 @@
+.button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 36px;
+    font-family: system-ui;
+    text-shadow: 2px 2px 4px rgb(255 255 255 / 80%)
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border: 2px solid red;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px 30px;
+}
+
+.red-button {
+    background-color: red;
+    color: white;
+    padding: 18px;
+    border-radius: 50px;
+    margin-top: 20%;
+}
+
+.timer {
+    color: white;
+    padding: 20px;
+    font-size: 42px;
+    font-family: system-ui;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    margin-bottom: 20%;
+}
+
+.calling {
+    margin-bottom: 10%;
+    font-size: 42px;
+    font-family: system-ui;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}

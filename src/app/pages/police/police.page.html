@@ -1,0 +1,17 @@
+<body>
+  <div class="container">
+    <p class="calling">Chamando 190...</p>
+    <p class="timer">{{ timeFormat(timer) }}</p>
+    
+    <div class="keyboard">
+      <button class="button" *ngFor="let number of numbers">{{ number }}</button>
+        <button class="button">*</button>
+        <button class="button center">0</button>
+        <button class="button">#</button>
+    </div>
+    
+    <button (click)="backHome()" class="button red-button">
+      <ion-icon class="alert-icon" name="call"></ion-icon>  
+    </button>
+  </div>
+</body>
