@@ -40,7 +40,11 @@ const routes: Routes = [
   {
     path: 'guardian',
     loadChildren: () => import('./pages/guardian/guardian.module').then( m => m.GuardianPageModule)
+  },  {
+    path: 'police',
+    loadChildren: () => import('./pages/police/police.module').then( m => m.PolicePageModule)
   },
+
 
 
 
