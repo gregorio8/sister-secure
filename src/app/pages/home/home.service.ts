@@ -12,7 +12,7 @@ export class HomeService {
 
   getJavaTest() {
     const url = 
-      'http://localhost:8080/api';
+      'https://servicodados.ibge.gov.br/api/v1/localidades/estados/';
     return this.http.get(url);
   }
 

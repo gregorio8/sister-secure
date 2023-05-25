@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.homeService.getJavaTest().subscribe( response => {
      this.message = response;
+     console.log(response)
     });
   }
 
