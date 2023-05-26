@@ -14,6 +14,7 @@
 			<ion-input class="eye" [readonly]="true" type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="userData.password"></ion-input>
 			<ion-icon style="align-self: center;" slot="end" name="{{ showPassword ? 'eye-off' : 'eye' }}" (click)="togglePassword($event)"></ion-icon>
 		</ion-item>
+		<button (click)="openChangePasswordDialog()" class="change-password">Alterar a Senha</button>
 	</div>
 </div>
 
