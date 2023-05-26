@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
     private modalController: ModalController
   ) { }
 
-  async abrirModal() {
+  async addPostOnFeed() {
     const modal = await this.modalController.create({
       component: ModalComponent
     });

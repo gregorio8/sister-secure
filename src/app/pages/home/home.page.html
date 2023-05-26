@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <ion-fab>
+  <ion-fab (click)="addPostOnFeed()">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
@@ -46,8 +46,6 @@
   <ion-card *ngFor="let conteudo of conteudos">
     <app-card [conteudo]="conteudo"></app-card>
   </ion-card>
-
-  <ion-button (click)="abrirModal()">Postar Conteúdo</ion-button>
  
 </div>
 <app-footer></app-footer>
