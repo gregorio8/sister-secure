@@ -7,11 +7,18 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent {
-  @Input() conteudo: any;
+  postContent: string = '';
 
   constructor(private modalController: ModalController) {}
 
   fecharModal() {
     this.modalController.dismiss();
   }
+
+  savePost() {
+    if (this.postContent) {
+      this.modalController.dismiss(this.postContent);
+    }
+  }
+
 }

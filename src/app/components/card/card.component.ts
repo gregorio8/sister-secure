@@ -8,18 +8,11 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  @Input() conteudo: any;
 
-  constructor(private modalController: ModalController) {}
+  @Input() post!: { content: string };
+  
+  constructor(private modalController: ModalController) {
 
-  async abrirModal() {
-    const modal = await this.modalController.create({
-      component: ModalComponent,
-      componentProps: {
-        conteudo: this.conteudo
-      }
-    });
-
-    await modal.present();
   }
+
 }

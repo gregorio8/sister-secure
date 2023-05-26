@@ -4,6 +4,7 @@ import { CustomButtonComponent } from './custom-button/custom-button.component';
 import { ModalComponent } from './modal/modal.component';
 import { CardComponent } from './card/card.component';
 import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,8 @@ import { IonicModule } from '@ionic/angular';
   declarations: [CustomButtonComponent, ModalComponent, CardComponent],
   imports: [
     CommonModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    FormsModule
   ],
   exports: [CustomButtonComponent, ModalComponent, CardComponent]
 })

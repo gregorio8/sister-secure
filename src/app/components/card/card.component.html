@@ -1,10 +1,7 @@
-<ion-card>
+<ion-card class="container">
   <ion-card-header>
-    <ion-card-subtitle>{{ conteudo.autor }}</ion-card-subtitle>
-    <ion-card-title>{{ conteudo.titulo }}</ion-card-title>
+    <ion-card-title>Usuária anônima</ion-card-title>
   </ion-card-header>
-  <ion-card-content>
-    <p>{{ conteudo.descricao }}</p>
-  </ion-card-content>
-  <ion-button (click)="abrirModal()">Interagir</ion-button>
+  <ion-card-content style="text-align: justify;">{{ post.content }}</ion-card-content>
+  <div></div>
 </ion-card>

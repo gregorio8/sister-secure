@@ -10,17 +10,10 @@
   .comment {
     background-color: #f2f2f2;
     padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 1px 1px 5px 2px;
+    box-shadow: 1px 1px 5px 0px;
   }
-
-.comment {
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
 
   .but-like {
     padding: 0 10px;
@@ -48,11 +41,14 @@
   .name {
     margin-left: 10px;
     width: 75%;
+    font-size: 18px;
   }
   
   .message {
     margin-top: 30px;
     font-size: 14px;
+    padding: 0 20px;
+    text-align: justify;
   }
 
 

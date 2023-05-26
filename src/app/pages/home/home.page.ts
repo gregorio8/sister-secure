@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   likeBool : boolean = false;
   message: any;
 
-  conteudos: any[] = [];
+  posts: { content: string }[] = [];
 
   constructor(
     private homeService: HomeService,
@@ -24,12 +24,21 @@ export class HomePage implements OnInit {
     private modalController: ModalController
   ) { }
 
-  async addPostOnFeed() {
+  async addPost() {
     const modal = await this.modalController.create({
-      component: ModalComponent
+      component: ModalComponent,
     });
 
-    await modal.present();
+    modal.onDidDismiss().then((result = {}) => {
+
+      const {data} = result;
+
+      if (data) {
+        this.posts.push({ content: data });
+      }
+    });
+
+    return await modal.present();
   }
 
   ngOnInit() {
