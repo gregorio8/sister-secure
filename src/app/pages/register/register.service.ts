@@ -19,4 +19,8 @@ export class RegisterService {
     localStorage.setItem('userData', JSON.stringify(this.userData));
   }
 
+  saveNewUserData(newPassword: string) {
+    localStorage.setItem('userData', newPassword);
+  }
+
 }
