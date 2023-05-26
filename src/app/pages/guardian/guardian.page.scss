@@ -1,4 +1,4 @@
-.alert-guardian{
+.alert-guardian {
     padding: 7px;
     border: 2px solid black;
     margin-right: 16px;
@@ -39,11 +39,13 @@ h1 {
     margin-left: 16px;
 }
 
-.add-guardian {
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    bottom: 100px;
-    right: 30px;
-    color: #e77b7b
+ion-fab {
+    top: 80%;
+    left: 75%;
+    border-radius: 50px;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+}
+
+ion-fab-button {
+    --background: #e77b7b;
 }

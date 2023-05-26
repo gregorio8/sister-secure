@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './home.service';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
+import { ModalComponent } from '../../components/modal/modal.component';
 
 @Component({
   selector: 'app-home',
@@ -14,11 +15,22 @@ export class HomePage implements OnInit {
   likeBool : boolean = false;
   message: any;
 
+  conteudos: any[] = [];
+
   constructor(
     private homeService: HomeService,
     private router: Router,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private modalController: ModalController
   ) { }
+
+  async abrirModal() {
+    const modal = await this.modalController.create({
+      component: ModalComponent
+    });
+
+    await modal.present();
+  }
 
   ngOnInit() {
     this.homeService.getJavaTest().subscribe( response => {

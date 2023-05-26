@@ -36,53 +36,18 @@
       {{likes}}<button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
     </div>
   </div>
+
+  <ion-fab>
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   
-  <div class="comment">
-    <div class="user">
-      <div class="user-photo"></div>
-      <div class="name">
-        John Doe
-      </div>
-      <div>
-        <button><img src="/assets/icon/dots.png" alt="botão para editar e excluir"></button>
-      </div>
-    </div>
-    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-    <div class="like">
-      {{likes}}<button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
-    </div>
-  </div>
+  <ion-card *ngFor="let conteudo of conteudos">
+    <app-card [conteudo]="conteudo"></app-card>
+  </ion-card>
 
-  <div class="comment">
-    <div class="user">
-      <div class="user-photo"></div>
-      <div class="name">
-        John Doe
-      </div>
-      <div>
-        <button><img src="/assets/icon/dots.png" alt="botão para editar e excluir"></button>
-      </div>
-    </div>
-    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-    <div class="like">
-      {{likes}}<button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
-    </div>
-  </div>
-
-  <div class="comment">
-    <div class="user">
-      <div class="user-photo"></div>
-      <div class="name">
-        John Doe
-      </div>
-      <div>
-        <button><img src="/assets/icon/dots.png" alt="botão para editar e excluir"></button>
-      </div>
-    </div>
-    <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-    <div class="like">
-      {{likes}}<button (click)="like()" class="but-like"><img src="/assets/icon/like.png" alt="botão de curtir"></button>
-    </div>
-  </div>
+  <ion-button (click)="abrirModal()">Postar Conteúdo</ion-button>
+ 
 </div>
 <app-footer></app-footer>
