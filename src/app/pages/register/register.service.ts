@@ -8,7 +8,13 @@ export class RegisterService {
   userData: any = {};
 
   constructor() {
+  }
+  
+  ngOnInit() {
+    this.userDataFunction();
+  }
 
+  userDataFunction() {
     const storedUserData = localStorage.getItem('userData');
     if (storedUserData) {
       this.userData = JSON.parse(storedUserData);
@@ -20,7 +26,8 @@ export class RegisterService {
   }
 
   saveNewUserData(newPassword: string) {
-    localStorage.setItem('userData', newPassword);
+    this.userData.password = newPassword
+    localStorage.setItem('userData', JSON.stringify(this.userData));
   }
 
 }

@@ -14,9 +14,12 @@ export class ProfilePage implements OnInit {
   showPassword: boolean = false;
   newPassword : string = "";
 
-  constructor(private registerService: RegisterService, private alertController: AlertController, private router: Router) {
+  constructor(
+    private registerService: RegisterService,
+    private alertController: AlertController,
+    private router: Router
+  ){
     this.userData = this.registerService.userData;
-    
   }
 
   ngOnInit() {
@@ -31,9 +34,15 @@ export class ProfilePage implements OnInit {
   }
 
   async changePassword(newPassword: string) {
-    this.userData.password = newPassword;
-    await this.registerService.saveNewUserData(newPassword);
-    console.log('Senha alterada com sucesso!');
+    
+    const storedUserData = localStorage.getItem('userData');
+  
+    if (storedUserData) {
+      const userData = JSON.parse(storedUserData);
+      userData.password = newPassword;
+      localStorage.setItem('userData', JSON.stringify(userData));
+      this.registerService.saveNewUserData(newPassword);
+    }
   }
 
 
@@ -57,7 +66,6 @@ export class ProfilePage implements OnInit {
         },
         {
           text: 'Alterar',
-          cssClass: 'xuxa',
           handler: (data) => {
             this.changePassword(data.newPassword)
             console.log('Ação executada');

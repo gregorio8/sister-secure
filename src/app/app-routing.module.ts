@@ -18,7 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'folder/:id',
@@ -31,26 +32,24 @@ const routes: Routes = [
   },
   {
     path: 'setting-page',
-    loadChildren: () => import('./pages/setting-page/setting-page.module').then( m => m.SettingPagePageModule)
+    loadChildren: () => import('./pages/setting-page/setting-page.module').then( m => m.SettingPagePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'location',
-    loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule)
+    loadChildren: () => import('./pages/location/location.module').then( m => m.LocationPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'guardian',
-    loadChildren: () => import('./pages/guardian/guardian.module').then( m => m.GuardianPageModule)
-  },  {
-    path: 'police',
-    loadChildren: () => import('./pages/police/police.module').then( m => m.PolicePageModule)
+    loadChildren: () => import('./pages/guardian/guardian.module').then( m => m.GuardianPageModule),
+    canActivate: [AuthGuard]
   },
-
-
-
-
-
-
-
+  {
+    path: 'police',
+    loadChildren: () => import('./pages/police/police.module').then( m => m.PolicePageModule),
+    canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({
