@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ToastService } from '../toast/toast.service';
 
 @Component({
   selector: 'app-modal',
@@ -9,7 +10,7 @@ import { ModalController } from '@ionic/angular';
 export class ModalComponent {
   postContent: string = '';
 
-  constructor(private modalController: ModalController) {}
+  constructor(private modalController: ModalController, private toastService: ToastService) {}
 
   fecharModal() {
     this.modalController.dismiss();
@@ -18,6 +19,8 @@ export class ModalComponent {
   savePost() {
     if (this.postContent) {
       this.modalController.dismiss(this.postContent);
+    } else {
+      this.toastService.presentToast('bottom', 'Sua mensagem não pode ser vazia!', 2000);
     }
   }
 

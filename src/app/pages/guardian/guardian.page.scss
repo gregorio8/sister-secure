@@ -5,8 +5,9 @@
 }
 
 .container {
-    height: 100%;
-    padding: 16px;
+  height: 100vh;
+  padding: 16px;
+  overflow: auto;
 }
 
 .guardian-div {

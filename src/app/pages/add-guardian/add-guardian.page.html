@@ -1,20 +1,32 @@
 <app-header></app-header>
 
 <div>
-  <h2>Crie um novo guardião</h2>
-  <form>
-    <div>
-      <label for="name">Nome: </label>
-      <input type="text" [(ngModel)]="name" name="name" id="name">
+  <h2 class="title">Cadastre um novo guardião</h2>
+
+    <div class="inputs">
+      <ion-input 
+        type="text"
+        fill="solid"
+        label="Nome"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="name">
+      </ion-input>
+
+      <ion-input 
+        type="number"
+        fill="solid"
+        label="Telefone"
+        class="custom"
+        labelPlacement="floating"
+        [(ngModel)]="phone">
+      </ion-input>
     </div>
-    <div>
-      <label for="phone">Telefone: </label>
-      <input type="number" [(ngModel)]="phone" name="phone" id="phone">
+
+    <div class="box-button">
+      <button class="add-btn" (click)="addGuardian()">Adicionar</button>
+      <button class="add-btn" (click)="backToGuardian()">Voltar</button>
     </div>
-    <div>
-      <button (click)="addGuardian()" style="padding: 10px;">Adicionar</button>
-    </div>
-  </form>
 </div>
 
 
