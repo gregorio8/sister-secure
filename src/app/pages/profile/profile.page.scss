@@ -29,5 +29,17 @@
 }
 
 .change-password {
-    padding: 8px;
+  height: 40px;
+    width: 230px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    background: black;
+    border: 1px solid white;
+}
+
+.change-password-box {
+  display: flex;
+  align-self: center;
+  margin-top: 15%;
 }
