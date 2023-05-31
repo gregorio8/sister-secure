@@ -22,7 +22,7 @@ export class AddGuardianPage implements OnInit {
   }
   
   addGuardian() {
-    this.guardianService.addToArray(this.name, this.phone);
+    this.guardianService.addToArray(this.name, this.phone)
     this.router.navigate(['/guardian'],);
   }
 
