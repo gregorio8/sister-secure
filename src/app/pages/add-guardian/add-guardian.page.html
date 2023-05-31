@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div>
+  <h2>Crie um novo guardião</h2>
+  <form>
+    <div>
+      <label for="name">Nome: </label>
+      <input type="text" [(ngModel)]="name" name="name" id="name">
+    </div>
+    <div>
+      <label for="phone">Telefone: </label>
+      <input type="number" [(ngModel)]="phone" name="phone" id="phone">
+    </div>
+    <div>
+      <button (click)="addGuardian()" style="padding: 10px;">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+
+<app-footer></app-footer>

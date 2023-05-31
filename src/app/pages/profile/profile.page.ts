@@ -20,8 +20,6 @@ export class ProfilePage implements OnInit {
   }
 
   ngOnInit() {
-    console.log('aaaa', this.userData);
-
   }
 
   togglePassword(event: Event) {

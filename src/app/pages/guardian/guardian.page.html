@@ -6,7 +6,7 @@
   <div class="guardian-div">
     <div style="display: flex;">
       <img class="profile" src="/assets/icon/profile.jpg">
-      <span class="bold">Miguel</span>
+      <span class="bold">Miguel | 9999-9999</span>
     </div>
     <div style="display: flex;">
       <button class="alert-guardian">Alertar</button>
@@ -17,7 +17,7 @@
   <div class="guardian-div">
     <div style="display: flex;">
       <img class="profile" src="/assets/icon/profile.jpg">
-      <span class="bold">Angelo</span>
+      <span class="bold">Angelo | 9999-9999</span>
     </div>
     <div style="display: flex;">
       <button class="alert-guardian">Alertar</button>
@@ -28,7 +28,7 @@
   <div class="guardian-div">
     <div style="display: flex;">
       <img class="profile" src="/assets/icon/profile.jpg">
-      <span class="bold">Chico</span>
+      <span class="bold">Chico | 9999-9999</span>
     </div>
     <div style="display: flex;">
       <button class="alert-guardian">Alertar</button>
@@ -36,33 +36,25 @@
     </div>
   </div>
 
-  <div class="guardian-div">
-    <div style="display: flex;">
-      <img class="profile" src="/assets/icon/profile.jpg">
-      <span class="bold">Antonio</span>
-    </div>
-    <div style="display: flex;">
-      <button class="alert-guardian">Alertar</button>
-      <button style="background: white;"><img src="/assets/icon/dots.png" alt="botão para editar e excluir"></button>
+  <div *ngFor="let guardian of guardians">
+    <div class="guardian-div">
+      <div style="display: flex;">
+        <img class="profile" src="/assets/icon/profile.jpg">
+        <span class="bold">{{guardian.name}} | {{guardian.phone}}</span>
+      </div>
+      <div style="display: flex;">
+        <button class="alert-guardian">Alertar</button>
+        <button style="background: white;"><img src="/assets/icon/dots.png" alt="botão para editar e excluir"></button>
+      </div>
     </div>
   </div>
 
-  <div class="guardian-div">
-    <div style="display: flex;">
-      <img class="profile" src="/assets/icon/profile.jpg">
-      <span class="bold">Maria</span>
-    </div>
-    <div style="display: flex;">
-      <button class="alert-guardian">Alertar</button>
-      <button style="background: white;"><img src="/assets/icon/dots.png" alt="botão para editar e excluir"></button>
-    </div>
-  </div>
-  
+
 </div>
 
 <ion-fab>
   <ion-fab-button>
-    <ion-icon name="add"></ion-icon>
+    <ion-icon name="add" (click)="goAddGuardian()"></ion-icon>
   </ion-fab-button>
 </ion-fab>
 

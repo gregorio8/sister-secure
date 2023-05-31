@@ -20,7 +20,7 @@ export class RegisterService {
   }
 
   saveNewUserData(newPassword: string) {
-    localStorage.setItem('userData', newPassword);
+    localStorage.setItem('userData.password', newPassword);
   }
 
 }
