@@ -22,13 +22,9 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const user = users.find(
-      (u: any) => u.email === this.email && u.password === this.password
-    )
-  
-    if (user) {
-      localStorage.setItem('currentUser', JSON.stringify(user));
+    const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+    if (userData.email === this.email && userData.password === this.password) {
+      localStorage.setItem('currentUser', JSON.stringify(userData));
       this.router.navigate(['/profile']);
     } else {
       this.error = 'Invalid email or password';

@@ -1,8 +1,13 @@
-<ion-content>
-  <ion-item>
-    <ion-textarea [(ngModel)]="postContent" placeholder="Conteúdo do post"></ion-textarea>
-  </ion-item>
-
-  <ion-button expand="full" (click)="savePost()">Salvar</ion-button>
-  <ion-button expand="full" (click)="fecharModal()">Fechar</ion-button>
-</ion-content>
+<div class="container">
+  <div class="content">
+    <ion-item class="item-box">
+      <ion-textarea style="height: 100vh;" [(ngModel)]="postContent" label="Digite sua mensagem" labelPlacement="floating" fill="outline"></ion-textarea>
+    </ion-item>
+  
+    <div class="box">
+      <ion-button class="default-btn" expand="full" (click)="savePost()">Salvar</ion-button>
+      <ion-button class="default-btn" expand="full" (click)="fecharModal()">Fechar</ion-button>
+    </div>
+  
+  </div>
+</div>
