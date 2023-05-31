@@ -5,16 +5,17 @@ import { ModalComponent } from './modal/modal.component';
 import { CardComponent } from './card/card.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-
-
+import { PostModalComponent } from './post-modal/post-modal.component';
+import { HeaderModule } from '../shared/header/header.module';
 
 @NgModule({
-  declarations: [CustomButtonComponent, ModalComponent, CardComponent],
+  declarations: [CustomButtonComponent, ModalComponent, CardComponent, PostModalComponent],
   imports: [
     CommonModule,
     IonicModule.forRoot(),
-    FormsModule
+    FormsModule,
+    HeaderModule
   ],
-  exports: [CustomButtonComponent, ModalComponent, CardComponent]
+  exports: [CustomButtonComponent, ModalComponent, CardComponent, PostModalComponent]
 })
 export class ComponentsModule { }

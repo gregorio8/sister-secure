@@ -3,6 +3,7 @@ import { HomeService } from './home.service';
 import { Router } from '@angular/router';
 import { AlertController, ModalController } from '@ionic/angular';
 import { ModalComponent } from '../../components/modal/modal.component';
+import { PostModalComponent } from 'src/app/components/post-modal/post-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -41,11 +42,18 @@ export class HomePage implements OnInit {
     return await modal.present();
   }
 
-  ngOnInit() {
-    this.homeService.getJavaTest().subscribe( response => {
-     this.message = response;
-     console.log(response)
+  async openPostModal(post: any) {
+    const modal = await this.modalController.create({
+      component: PostModalComponent,
+      componentProps: {
+        postContent: post.content
+      }
     });
+  
+    return await modal.present();
+  }
+
+  ngOnInit() {
   }
 
   like(){
@@ -56,10 +64,6 @@ export class HomePage implements OnInit {
       this.likes++;
       this.likeBool = true;
     }
-  }
-
-  removeLike(){
-
   }
 
   callPolice() {
@@ -80,7 +84,6 @@ export class HomePage implements OnInit {
         },
         {
           text: 'Ligar',
-          cssClass: 'xuxa',
           handler: () => {
             console.log('Ação executada');
             this.callPolice();
