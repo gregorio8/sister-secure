@@ -11,12 +11,10 @@ export class AppComponent {
 
   public appPages = [
     { title: 'Meu perfil', url: 'profile', icon: 'person' },
-    { title: 'Excluir a conta', url: '/folder/excluir', icon: 'trash' },
-    { title: 'Configurações', url: '/folder/configuracoes', icon: 'settings' },
-    { title: 'Sobre', url: '/folder/sobre', icon: 'information-circle' },
+    { title: 'Excluir a conta', url: '/', icon: 'trash' },
+    { title: 'Configurações', url: '/', icon: 'settings' },
+    { title: 'Sobre', url: '/', icon: 'information-circle' },
   ];
-
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   constructor(private router: Router) {
 

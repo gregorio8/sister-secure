@@ -26,7 +26,7 @@ export class LoginPage implements OnInit {
     const userData = JSON.parse(localStorage.getItem('userData') || '{}');
     if (userData.email === this.email && userData.password === this.password) {
       localStorage.setItem('currentUser', JSON.stringify(userData));
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/home']);
     } else {
       this.error = 'Invalid email or password';
       this.toastService.presentToast('bottom', 'Credenciais inválidas!', 2000);
